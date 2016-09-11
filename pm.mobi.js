@@ -118,7 +118,7 @@
                     }
                 }
                 //replace // to /
-                search = search.replace(/(?:\/){2,}/g, '/');
+                search = normalize(search);
                 //
                 var hash = History.routeView ? '' : '/' + el;
                 var uri = normalize([his || this.baseURI, search, hash].join(''));
