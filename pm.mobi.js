@@ -91,7 +91,7 @@
                 	his=his.split(':');
 					handle=his[0];
 					his=his.length > 1 ? his[1] : '';
-                	if(!/^\//.test(his)){
+                	if (his && !/^\//.test(his)) {
                 		his='/'+his;
                 	}
                 }
