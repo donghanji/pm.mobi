@@ -873,6 +873,7 @@
         //
         MobiView.doAnimation = function ($fromEl, $toEl, options) {
             var direction = options.direction || 'left';
+            var mobis = options.mobis||{};
 
             MobiView.$mobiView.prepend($toEl);
             $toEl
