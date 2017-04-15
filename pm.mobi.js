@@ -892,7 +892,9 @@
             setTimeout(next, 1);
             var after = function () {
 
-                $fromEl.appendTo(MobiView.$views);
+                if(mobis.destroy !== 'no'){
+                    $fromEl.appendTo(MobiView.$views);
+                }
                 $toEl
                     .removeClass('mobi-to-view')
                     .removeClass(direction);
@@ -985,6 +987,7 @@
 
             return MobiView.doAnimation($current, $active, {
                 direction: direction,
+                mobis:nview.mobis,
                 before: function () {
                     MobiView.globalBeforeCallback && MobiView.globalBeforeCallback(nview, nview.mobis);
                     //ios
