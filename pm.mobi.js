@@ -120,7 +120,8 @@
                 //replace // to /
                 search = normalize(search);
                 //
-                var hash = History.routeView ? '' : '/' + el;
+                //var hash = History.routeView ? '' : '/' + el;
+                var hash = History.routeView ? '' : el;
                 var uri = normalize([his || this.baseURI, search, hash].join(''));
                 var title = title || document.title;
                 var options = {
