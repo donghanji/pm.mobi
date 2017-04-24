@@ -896,6 +896,8 @@
 
                 if(mobis.destroy !== 'no'){
                     $fromEl.appendTo(MobiView.$views);
+                }else{
+                    $fromEl.removeAttr('data-actived');
                 }
                 $toEl
                     .removeClass('mobi-to-view')
