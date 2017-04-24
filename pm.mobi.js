@@ -957,7 +957,7 @@
             //mobi view load callback
             //call mobis.preload before translation
             var mobiLoadCallback = mobis.perload;
-            mobiLoadCallback && mobiLoadCallback.call(nview, nview.mobis);
+            mobiLoadCallback && mobiLoadCallback.call(nview, nview.mobis,cview);
             //direction
             var direction = mobis.direction || MobiView.translateDirection;
             //
@@ -993,7 +993,7 @@
                 direction: direction,
                 mobis:nview.mobis,
                 before: function () {
-                    MobiView.globalBeforeCallback && MobiView.globalBeforeCallback(nview, nview.mobis);
+                    MobiView.globalBeforeCallback && MobiView.globalBeforeCallback(nview, nview.mobis,cview);
                     //ios
                     //MobiView.$mobiView.css({'overflow-x':'visible'});
                     //android
@@ -1005,10 +1005,10 @@
                         //mobi view loaded callback
                         //call mobis.perloaded,when after translation and content load complete
                         var mobiLoadedCallback = mobis.perloaded;
-                        mobiLoadedCallback && mobiLoadedCallback.call(nview, nview.mobis);
+                        mobiLoadedCallback && mobiLoadedCallback.call(nview, nview.mobis,cview);
 
                         //call global callback
-                        MobiView.globalAfterCallback && MobiView.globalAfterCallback.call(nview, nview.mobis);
+                        MobiView.globalAfterCallback && MobiView.globalAfterCallback.call(nview, nview.mobis,cview);
 
 
                         $active
